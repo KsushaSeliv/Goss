@@ -1,0 +1,14 @@
+octype html
+html(lang='en')
+  head
+    title= title
+  body
+    h4#author(title='Goss') Селиванова Ксения
+    h1 Пример работы шаблонизатора
+    form(method='get', action='/logout')
+     input.btn.btn-primary(type='submit', value='Выйти из аккаунта')
+    #container
+      p Список логинов:
+      ol
+        each item in items
+          li= item.login
